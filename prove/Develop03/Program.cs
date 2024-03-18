@@ -19,7 +19,7 @@ class Program
             }
             else if (userInput.ToLower() == "quit")
             {
-                break; // Exit the loop and end the program
+                break; 
             }
         }
     }

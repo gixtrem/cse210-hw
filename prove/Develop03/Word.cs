@@ -43,7 +43,7 @@ public class Word
         }
         else if (userInput.ToLower() == "quit")
         {
-            Environment.Exit(0); // Exit the program
+            Environment.Exit(0);
         }
     }
 }
