@@ -26,24 +26,3 @@ public class Word
             Console.Write($"{_word} ");
         }
     }
-
-    public void HideWord()
-    {
-        _IsShown = false;
-    }
-
-    public void HandleUserInput()
-    {
-        Console.WriteLine("\nPress Enter to erase the word or type 'quit' to end the program:");
-        string userInput = Console.ReadLine();
-
-        if (string.IsNullOrEmpty(userInput))
-        {
-            _word = string.Empty;
-        }
-        else if (userInput.ToLower() == "quit")
-        {
-            Environment.Exit(0);
-        }
-    }
-}
