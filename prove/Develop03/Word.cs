@@ -2,27 +2,35 @@ using System;
 
 public class Word
 {
-    private string _word;
-    private bool _IsShown;
+    private string text;
+    private bool hidden;
 
-    public Word(string word)
+    public Word(string text)
     {
-        _word = word;
-        _IsShown = true;
+        this.text = text;
+        this.hidden = false;
     }
 
-    public void DisplayWord()
+    public bool Hidden => hidden;
+
+    public void Hide()
     {
-        if (_IsShown == false)
-        {
-            foreach (char letter in _word)
-            {
-                Console.Write("_");
-            }
-            Console.Write(" ");
-        }
+        this.hidden = true;
+    }
+
+    public string GetText()
+    {
+        if (hidden)
+            return new string('_', text.Length);
         else
-        {
-            Console.Write($"{_word} ");
-        }
+            return text;
     }
+
+    public string GetHiddenText()
+    {
+        if (hidden)
+            return new string('_', text.Length);
+        else
+            return text;
+    }
+}
